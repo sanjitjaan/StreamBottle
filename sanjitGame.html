@@ -1,0 +1,747 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<style type="text/css">
+body {
+  color: #fff;
+  font: 87.5%/1.5em 'Open Sans', sans-serif;
+  //background:url(img/new.png)no-repeat center center fixed;
+  //opacity:0.2;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+
+.form-wrapper {
+  width:70%;
+  height:80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  margin: 0px 0px 0px 0px;
+  background: rgba(0,0,0,0.27);
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.6),inset 0px 1px 0px rgba(255,255,255,0.04);
+}
+
+
+.form-item {
+width:100%;
+}
+
+
+h3{
+  font-size: 25px;
+  font-weight: 640;
+  margin-bottom: 10px;
+  color: #e7e7e7;
+  padding:6px;
+  font-family:'sans-serif','helvetica';
+}
+.button-panel {
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+
+.button {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+  transition: background 0.6s linear;
+}
+
+#btm1 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm2 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm3 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm4 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm5 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm6 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm7 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm8 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm9 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm10 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm11{
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm12 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm13 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm14 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm15 {
+  background-color: lightblue;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+#btm16 {
+  background-color: lightgreen;
+  font: bold 500% "Times New Roman";
+  height: 120px;
+  width: 120px;
+}
+
+
+.button-panel .button {
+  border-radius: 2px
+}
+</style>
+<script type="text/javascript">
+
+	function change1(){
+	var r=window.getComputedStyle(document.getElementById('btm2')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm5')).backgroundColor;
+	if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm2').style.backgroundColor=window.getComputedStyle(document.getElementById('btm1')).backgroundColor;
+	document.getElementById('btm1').style.backgroundColor=r;
+	document.getElementById('btm2').value=document.getElementById('btm1').value;
+	document.getElementById('btm1').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm5').style.backgroundColor=window.getComputedStyle(document.getElementById('btm1')).backgroundColor;
+	document.getElementById('btm1').style.backgroundColor=d;
+	document.getElementById('btm5').value=document.getElementById('btm1').value;
+	document.getElementById('btm1').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change2(){
+	var l=window.getComputedStyle(document.getElementById('btm1')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm3')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm6')).backgroundColor;
+
+	if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm1').style.backgroundColor=window.getComputedStyle(document.getElementById('btm2')).backgroundColor;
+	document.getElementById('btm2').style.backgroundColor=l;
+	document.getElementById('btm1').value=document.getElementById('btm2').value;
+	document.getElementById('btm2').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm3').style.backgroundColor=window.getComputedStyle(document.getElementById('btm2')).backgroundColor;
+	document.getElementById('btm2').style.backgroundColor=r;
+	document.getElementById('btm3').value=document.getElementById('btm2').value;
+	document.getElementById('btm2').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm6').style.backgroundColor=window.getComputedStyle(document.getElementById('btm2')).backgroundColor;
+	document.getElementById('btm2').style.backgroundColor=d;
+	document.getElementById('btm6').value=document.getElementById('btm2').value;
+	document.getElementById('btm2').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change3(){
+	var l=window.getComputedStyle(document.getElementById('btm2')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm4')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm7')).backgroundColor;
+
+	if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm2').style.backgroundColor=window.getComputedStyle(document.getElementById('btm3')).backgroundColor;
+	document.getElementById('btm3').style.backgroundColor=l;
+	document.getElementById('btm2').value=document.getElementById('btm3').value;
+	document.getElementById('btm3').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm4').style.backgroundColor=window.getComputedStyle(document.getElementById('btm3')).backgroundColor;
+	document.getElementById('btm3').style.backgroundColor=r;
+	document.getElementById('btm4').value=document.getElementById('btm3').value;
+	document.getElementById('btm3').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm7').style.backgroundColor=window.getComputedStyle(document.getElementById('btm3')).backgroundColor;
+	document.getElementById('btm3').style.backgroundColor=d;
+	document.getElementById('btm7').value=document.getElementById('btm3').value;
+	document.getElementById('btm3').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change4(){
+	var l=window.getComputedStyle(document.getElementById('btm3')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm8')).backgroundColor;
+
+	if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm3').style.backgroundColor=window.getComputedStyle(document.getElementById('btm4')).backgroundColor;
+	document.getElementById('btm4').style.backgroundColor=l;
+	document.getElementById('btm3').value=document.getElementById('btm4').value;
+	document.getElementById('btm4').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm8').style.backgroundColor=window.getComputedStyle(document.getElementById('btm4')).backgroundColor;
+	document.getElementById('btm4').style.backgroundColor=d;
+	document.getElementById('btm8').value=document.getElementById('btm4').value;
+	document.getElementById('btm4').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change5(){
+	var u=window.getComputedStyle(document.getElementById('btm1')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm6')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm9')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm1').style.backgroundColor=window.getComputedStyle(document.getElementById('btm5')).backgroundColor;
+	document.getElementById('btm5').style.backgroundColor=u;
+	document.getElementById('btm1').value=document.getElementById('btm5').value;
+	document.getElementById('btm5').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm6').style.backgroundColor=window.getComputedStyle(document.getElementById('btm5')).backgroundColor;
+	document.getElementById('btm5').style.backgroundColor=r;
+	document.getElementById('btm6').value=document.getElementById('btm5').value;
+	document.getElementById('btm5').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm9').style.backgroundColor=window.getComputedStyle(document.getElementById('btm5')).backgroundColor;
+	document.getElementById('btm5').style.backgroundColor=d;
+	document.getElementById('btm9').value=document.getElementById('btm5').value;
+	document.getElementById('btm5').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change6(){
+	var u=window.getComputedStyle(document.getElementById('btm2')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm5')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm7')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm10')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm2').style.backgroundColor=window.getComputedStyle(document.getElementById('btm6')).backgroundColor;
+	document.getElementById('btm6').style.backgroundColor=u;
+	document.getElementById('btm2').value=document.getElementById('btm6').value;
+	document.getElementById('btm6').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm5').style.backgroundColor=window.getComputedStyle(document.getElementById('btm6')).backgroundColor;
+	document.getElementById('btm6').style.backgroundColor=l;
+	document.getElementById('btm5').value=document.getElementById('btm6').value;
+	document.getElementById('btm6').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm7').style.backgroundColor=window.getComputedStyle(document.getElementById('btm6')).backgroundColor;
+	document.getElementById('btm6').style.backgroundColor=r;
+	document.getElementById('btm7').value=document.getElementById('btm6').value;
+	document.getElementById('btm6').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm10').style.backgroundColor=window.getComputedStyle(document.getElementById('btm6')).backgroundColor;
+	document.getElementById('btm6').style.backgroundColor=d;
+	document.getElementById('btm10').value=document.getElementById('btm6').value;
+	document.getElementById('btm6').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change7(){
+	var u=window.getComputedStyle(document.getElementById('btm3')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm6')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm8')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm11')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm3').style.backgroundColor=window.getComputedStyle(document.getElementById('btm7')).backgroundColor;
+	document.getElementById('btm7').style.backgroundColor=u;
+	document.getElementById('btm3').value=document.getElementById('btm7').value;
+	document.getElementById('btm7').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm6').style.backgroundColor=window.getComputedStyle(document.getElementById('btm7')).backgroundColor;
+	document.getElementById('btm7').style.backgroundColor=l;
+	document.getElementById('btm6').value=document.getElementById('btm7').value;
+	document.getElementById('btm7').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm8').style.backgroundColor=window.getComputedStyle(document.getElementById('btm7')).backgroundColor;
+	document.getElementById('btm7').style.backgroundColor=r;
+	document.getElementById('btm8').value=document.getElementById('btm7').value;
+	document.getElementById('btm7').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm11').style.backgroundColor=window.getComputedStyle(document.getElementById('btm7')).backgroundColor;
+	document.getElementById('btm7').style.backgroundColor=d;
+	document.getElementById('btm11').value=document.getElementById('btm7').value;
+	document.getElementById('btm7').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change8(){
+	var u=window.getComputedStyle(document.getElementById('btm4')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm7')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm12')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm4').style.backgroundColor=window.getComputedStyle(document.getElementById('btm8')).backgroundColor;
+	document.getElementById('btm8').style.backgroundColor=u;
+	document.getElementById('btm4').value=document.getElementById('btm8').value;
+	document.getElementById('btm8').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm7').style.backgroundColor=window.getComputedStyle(document.getElementById('btm8')).backgroundColor;
+	document.getElementById('btm8').style.backgroundColor=l;
+	document.getElementById('btm7').value=document.getElementById('btm8').value;
+	document.getElementById('btm8').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm12').style.backgroundColor=window.getComputedStyle(document.getElementById('btm8')).backgroundColor;
+	document.getElementById('btm8').style.backgroundColor=d;
+	document.getElementById('btm12').value=document.getElementById('btm8').value;
+	document.getElementById('btm8').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change9(){
+	var u=window.getComputedStyle(document.getElementById('btm5')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm10')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm13')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm5').style.backgroundColor=window.getComputedStyle(document.getElementById('btm9')).backgroundColor;
+	document.getElementById('btm9').style.backgroundColor=u;
+	document.getElementById('btm5').value=document.getElementById('btm9').value;
+	document.getElementById('btm9').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm10').style.backgroundColor=window.getComputedStyle(document.getElementById('btm9')).backgroundColor;
+	document.getElementById('btm9').style.backgroundColor=r;
+	document.getElementById('btm10').value=document.getElementById('btm9').value;
+	document.getElementById('btm9').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm13').style.backgroundColor=window.getComputedStyle(document.getElementById('btm9')).backgroundColor;
+	document.getElementById('btm9').style.backgroundColor=d;
+	document.getElementById('btm13').value=document.getElementById('btm9').value;
+	document.getElementById('btm9').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change10(){
+	var u=window.getComputedStyle(document.getElementById('btm6')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm9')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm11')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm14')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm6').style.backgroundColor=window.getComputedStyle(document.getElementById('btm10')).backgroundColor;
+	document.getElementById('btm10').style.backgroundColor=u;
+	document.getElementById('btm6').value=document.getElementById('btm10').value;
+	document.getElementById('btm10').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm9').style.backgroundColor=window.getComputedStyle(document.getElementById('btm10')).backgroundColor;
+	document.getElementById('btm10').style.backgroundColor=l;
+	document.getElementById('btm9').value=document.getElementById('btm10').value;
+	document.getElementById('btm10').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm11').style.backgroundColor=window.getComputedStyle(document.getElementById('btm10')).backgroundColor;
+	document.getElementById('btm10').style.backgroundColor=r;
+	document.getElementById('btm11').value=document.getElementById('btm10').value;
+	document.getElementById('btm10').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm14').style.backgroundColor=window.getComputedStyle(document.getElementById('btm10')).backgroundColor;
+	document.getElementById('btm10').style.backgroundColor=d;
+	document.getElementById('btm14').value=document.getElementById('btm10').value;
+	document.getElementById('btm10').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change11(){
+	var u=window.getComputedStyle(document.getElementById('btm7')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm10')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm12')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm15')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm7').style.backgroundColor=window.getComputedStyle(document.getElementById('btm11')).backgroundColor;
+	document.getElementById('btm11').style.backgroundColor=u;
+	document.getElementById('btm7').value=document.getElementById('btm11').value;
+	document.getElementById('btm11').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm10').style.backgroundColor=window.getComputedStyle(document.getElementById('btm11')).backgroundColor;
+	document.getElementById('btm11').style.backgroundColor=l;
+	document.getElementById('btm10').value=document.getElementById('btm11').value;
+	document.getElementById('btm11').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm12').style.backgroundColor=window.getComputedStyle(document.getElementById('btm11')).backgroundColor;
+	document.getElementById('btm11').style.backgroundColor=r;
+	document.getElementById('btm12').value=document.getElementById('btm11').value;
+	document.getElementById('btm11').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm15').style.backgroundColor=window.getComputedStyle(document.getElementById('btm11')).backgroundColor;
+	document.getElementById('btm11').style.backgroundColor=d;
+	document.getElementById('btm15').value=document.getElementById('btm11').value;
+	document.getElementById('btm11').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change12(){
+	var u=window.getComputedStyle(document.getElementById('btm8')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm11')).backgroundColor;
+	var d=window.getComputedStyle(document.getElementById('btm16')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm8').style.backgroundColor=window.getComputedStyle(document.getElementById('btm12')).backgroundColor;
+	document.getElementById('btm12').style.backgroundColor=u;
+	document.getElementById('btm8').value=document.getElementById('btm12').value;
+	document.getElementById('btm12').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm11').style.backgroundColor=window.getComputedStyle(document.getElementById('btm12')).backgroundColor;
+	document.getElementById('btm12').style.backgroundColor=l;
+	document.getElementById('btm11').value=document.getElementById('btm12').value;
+	document.getElementById('btm12').value=" ";
+	}
+	else if(d=="rgb(144, 238, 144)"){
+	document.getElementById('btm16').style.backgroundColor=window.getComputedStyle(document.getElementById('btm12')).backgroundColor;
+	document.getElementById('btm12').style.backgroundColor=d;
+	document.getElementById('btm16').value=document.getElementById('btm12').value;
+	document.getElementById('btm12').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change13(){
+	var u=window.getComputedStyle(document.getElementById('btm9')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm14')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm9').style.backgroundColor=window.getComputedStyle(document.getElementById('btm13')).backgroundColor;
+	document.getElementById('btm13').style.backgroundColor=u;
+	document.getElementById('btm9').value=document.getElementById('btm13').value;
+	document.getElementById('btm13').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm14').style.backgroundColor=window.getComputedStyle(document.getElementById('btm13')).backgroundColor;
+	document.getElementById('btm13').style.backgroundColor=r;
+	document.getElementById('btm14').value=document.getElementById('btm13').value;
+	document.getElementById('btm13').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change14(){
+	var u=window.getComputedStyle(document.getElementById('btm10')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm13')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm15')).backgroundColor;
+
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm10').style.backgroundColor=window.getComputedStyle(document.getElementById('btm14')).backgroundColor;
+	document.getElementById('btm14').style.backgroundColor=u;
+	document.getElementById('btm10').value=document.getElementById('btm14').value;
+	document.getElementById('btm14').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm13').style.backgroundColor=window.getComputedStyle(document.getElementById('btm14')).backgroundColor;
+	document.getElementById('btm14').style.backgroundColor=l;
+	document.getElementById('btm13').value=document.getElementById('btm14').value;
+	document.getElementById('btm14').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm15').style.backgroundColor=window.getComputedStyle(document.getElementById('btm14')).backgroundColor;
+	document.getElementById('btm14').style.backgroundColor=r;
+	document.getElementById('btm15').value=document.getElementById('btm14').value;
+	document.getElementById('btm14').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change15(){
+	var u=window.getComputedStyle(document.getElementById('btm11')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm14')).backgroundColor;
+	var r=window.getComputedStyle(document.getElementById('btm16')).backgroundColor;
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm11').style.backgroundColor=window.getComputedStyle(document.getElementById('btm15')).backgroundColor;
+	document.getElementById('btm15').style.backgroundColor=u;
+	document.getElementById('btm11').value=document.getElementById('btm15').value;
+	document.getElementById('btm15').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm14').style.backgroundColor=window.getComputedStyle(document.getElementById('btm15')).backgroundColor;
+	document.getElementById('btm15').style.backgroundColor=l;
+	document.getElementById('btm14').value=document.getElementById('btm15').value;
+	document.getElementById('btm15').value=" ";
+	}
+	else if(r=="rgb(144, 238, 144)"){
+	document.getElementById('btm16').style.backgroundColor=window.getComputedStyle(document.getElementById('btm15')).backgroundColor;
+	document.getElementById('btm15').style.backgroundColor=r;
+	document.getElementById('btm16').value=document.getElementById('btm15').value;
+	document.getElementById('btm15').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function change16(){
+	var u=window.getComputedStyle(document.getElementById('btm12')).backgroundColor;
+	var l=window.getComputedStyle(document.getElementById('btm15')).backgroundColor;
+	if(u=="rgb(144, 238, 144)"){
+	document.getElementById('btm12').style.backgroundColor=window.getComputedStyle(document.getElementById('btm16')).backgroundColor;
+	document.getElementById('btm16').style.backgroundColor=u;
+	document.getElementById('btm12').value=document.getElementById('btm16').value;
+	document.getElementById('btm16').value=" ";
+	}
+	else if(l=="rgb(144, 238, 144)"){
+	document.getElementById('btm15').style.backgroundColor=window.getComputedStyle(document.getElementById('btm16')).backgroundColor;
+	document.getElementById('btm16').style.backgroundColor=l;
+	document.getElementById('btm15').value=document.getElementById('btm16').value;
+	document.getElementById('btm16').value=" ";
+	}
+	else {
+	//alert("Wrong move");
+	}
+	check();
+	}
+
+	function check(){
+	if(window.getComputedStyle(document.getElementById('btm1')).value=="1"
+	&& window.getComputedStyle(document.getElementById('btm2')).value=="2"
+	&& window.getComputedStyle(document.getElementById('btm3')).value=="3"
+	&& window.getComputedStyle(document.getElementById('btm4')).value=="4"
+	&& window.getComputedStyle(document.getElementById('btm5')).value=="5"
+	&& window.getComputedStyle(document.getElementById('btm6')).value=="6"
+	&& window.getComputedStyle(document.getElementById('btm7')).value=="7"
+	&& window.getComputedStyle(document.getElementById('btm8')).value=="8"
+	&& window.getComputedStyle(document.getElementById('btm9')).value=="9"
+	&& window.getComputedStyle(document.getElementById('btm10')).value=="10"
+	&& window.getComputedStyle(document.getElementById('btm11')).value=="11"
+	&& window.getComputedStyle(document.getElementById('btm12')).value=="12"
+	&& window.getComputedStyle(document.getElementById('btm13')).value=="13"
+	&& window.getComputedStyle(document.getElementById('btm14')).value=="14"
+	&& window.getComputedStyle(document.getElementById('btm15')).value=="15")
+	{
+	alert("Game Win");
+	}
+	var p=window.getComputedStyle(document.getElementById('form-wrap')).height;
+	//alert(parseInt(p,10));
+	if(parseInt(p,10)>800){
+	document.getElementById('mainPic').style.margin="6% 0% 0% 0%";
+	}
+	else{
+	document.getElementById('mainPic').style.margin="-43% 0% 0% 60%";
+	}
+	}
+</script>
+</head>
+<body>
+<h3>Puzzal Game by Sanjit Kumar</h3>
+<div class="form-wrapper" id="form-wrap">
+    <table>
+	<div class="button-panel">
+	<tr><td>
+
+		<input type="submit" id="btm1" onclick="change1();" class="button" value=" 3 "></input>
+
+	</td><td>
+
+		<input type="submit" id="btm2" onclick="change2();" class="button" value="8"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm3" onclick="change3();" class="button" value="5"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm4" onclick="change4();" class="button" value="2"></input>
+
+	</td></tr><tr><td>
+
+		<input type="submit" id="btm5" onclick="change5();" class="button" value="11"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm6" onclick="change6();" class="button" value="7"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm7" onclick="change7();" class="button" value="4"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm8" onclick="change8();" class="button" value="13"></input>
+
+	</td></tr><tr><td>
+
+		<input type="submit" id="btm9" onclick="change9();" class="button" value="15"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm10" onclick="change10();" class="button" value="12"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm11" onclick="change11();" class="button" value="6"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm12" onclick="change12();" class="button" value="10"></input>
+
+	</td></tr><tr><td>
+
+		<input type="submit" id="btm13" onclick="change13();" class="button" value="14"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm14" onclick="change14();" class="button" value="1"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm15" onclick="change15();" class="button" value="9"></input>
+
+	</td><td>
+
+		<input type="submit" id="btm16" onclick="change16();" class="button" value=" "></input>
+
+	</td></tr>
+	</div>
+	<table>
+	<div class="mainPic" id="mainPic">
+	</div>
+
+</div>
+
+</body>
+</html>
