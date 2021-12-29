@@ -1,4 +1,5 @@
 # this game written in python
+import streamlit as st
 import pygame, sys
 from math import cos, sin, pi, degrees, radians
 
